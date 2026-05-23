@@ -16,8 +16,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node claudia.js",
-    "dev": "nodemon claudia.js"
+    "start": "node user.js",
+    "dev": "nodemon user.js"
   },
   "dependencies": {
     "dotenv": "^17.4.2",

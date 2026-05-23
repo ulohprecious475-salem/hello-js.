@@ -2,22 +2,23 @@ require("dotenv").config();
 
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT // // 3000;
+const PORT = 4000;
+
 
 
 app.use(express.json());
 
-app.post('/echo', (req, res) => {
+app.get('/echo', (req, res) => {
 
   console.log(req.body);
-  res.json({ echoed: req.body }); // req.body now available!});
+  res.json({ "echoed": req.body }); // req.body now available!});
 });
 
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.send('My week 2 API!');
 });
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
 });
